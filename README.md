@@ -10,7 +10,7 @@
 - Check if the email is deliverable or not.
 - Find out if the email is disposable or not.
 - Identify if the email is considered spam.
-- Check if the email is registered on popular social media platforms such as Facebook, Instagram, Twitter, Snapchat, Parler, Rumble, MeWe, Imgur, Adobe, Wordpress, and Duolingo.
+- Check if the email is registered on popular social media platforms such as Facebook, Twitter, Snapchat, Parler, Rumble, MeWe, Imgur, Adobe, Wordpress, and Duolingo.
 
 ## 💻 Usage
 
