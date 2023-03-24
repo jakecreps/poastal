@@ -20,7 +20,7 @@ Make sure you have the requirements installed.
 
 Navigate to the backend folder and run `poastal.py` to start the Flask app. This points to port:8080.
 
-```python3 poastal.py```
+```python poastal.py```
 
 Open `index.html` in the root directory to use the UI.
 
