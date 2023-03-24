@@ -1,0 +1,45 @@
+<!-- The following is a HTML file that contains a form for a website called Poastal -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Specifies the character encoding of the HTML document -->
+    <meta charset="UTF-8">
+    <!-- Defines the viewport for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title of the page -->
+    <title>Poastal</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link to the website icon -->
+    <link rel="icon" type="image/x-icon" href="./img/post.png">
+    <!-- Links to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header section -->
+    <div class="header">
+        <!-- Image logo for the website -->
+        <img src="./img/post.png" alt="poastal" width="50" height="50">
+        <!-- Title of the website -->
+        <h1>Poastal</h1>
+    </div>
+    <!-- Form section for email input -->
+    <input type="email" id="email" placeholder="Enter email address">
+    <!-- Display section for search results (hidden by default) -->
+    <div id="loading" class="hidden">Searching...</div>
+    <table id="result-table">
+        <!-- Table header section -->
+        <thead>
+            <tr>
+            </tr>
+        </thead>
+        <!-- Table body section for displaying search results -->
+        <tbody id="result">
+        </tbody>
+    </table>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
