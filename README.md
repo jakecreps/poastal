@@ -14,15 +14,12 @@ Poastal is a powerful email OSINT tool that provides valuable information on any
 ## :question: How to Use 
 
 1. Go to the 'backend' folder and run `poastal.py` to start a Flask app locally pointing to port 8080.
-```python
-python3 poastal.py
+python
+python3 poastal.py```
+
 Open index.html in the root directory to open up the UI.
 
 Enter an email address in the UI and it will request poastal.py and return the information on the page.
-
-## :computer: Installation 
-
-Poastal is a web-based tool and does not require any installation or downloads. You can access it directly through your web browser.
 
 ## :speech_balloon: Feedback 
 
