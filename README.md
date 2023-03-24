@@ -26,6 +26,8 @@ Open `index.html` in the root directory to use the UI.
 
 Enter an email address and see the results.
 
+Test with `example@gmail.com`.
+
 ## 📣 Feedback 
 
 I hope you find Poastal to be a valuable tool for your OSINT investigations. If you have any feedback or suggestions on how we can improve Poastal, please let me know. I'm always looking for ways to improve this tool to better serve the OSINT community.
