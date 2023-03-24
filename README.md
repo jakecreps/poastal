@@ -21,9 +21,9 @@ Navigate to the backend folder and run `poastal.py` to start the Flask app. This
 
 ```python3 poastal.py```
 
-Open index.html in the root directory to open up the UI.
+Open `index.html` in the root directory to use the UI.
 
-Enter an email address in the UI and it will request `poastal.py` and return the information on the page.
+Enter an email address and see the results.
 
 ## 📣 Feedback 
 
