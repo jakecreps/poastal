@@ -1,4 +1,4 @@
-# Poastal - the Email OSINT Tool
+# Poastal - the Email OSINT tool
 
 ![Poastal](img/poastal.png)
 
