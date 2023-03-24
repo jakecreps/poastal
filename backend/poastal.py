@@ -20,7 +20,7 @@ app.config['JSON_SORT_KEYS'] = False
 CORS(app)
 
 @app.route('/')
-def emaildetective():
+def poastal():
     email = request.args.get('email')
     if email:
         twitter_result = twitter_email(email)
