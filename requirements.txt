@@ -1,3 +1,4 @@
 requests
-json
 re
+flask
+flask_cors
