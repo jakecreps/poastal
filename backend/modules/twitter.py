@@ -1,4 +1,5 @@
 import requests
+import json
 
 def twitter_email(email):
 
@@ -8,11 +9,9 @@ def twitter_email(email):
         email_checker,
     )
 
-    checker = response.text
+    check = response.json()
 
-    text = '{"valid":false,"msg":"Email has already been taken.","taken":true}'
-
-    if text in checker:
+    if check["taken"]:
         return f'true'
     else:
         return f'false'
