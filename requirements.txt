@@ -1,4 +1,4 @@
 requests
-re
+regex
 flask
 flask_cors
