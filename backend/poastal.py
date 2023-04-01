@@ -14,6 +14,7 @@ from duolingo import duolingo_name_check, duolingo_email
 from adobe import adobe_email, adobe_facebook_email
 from wordpress import wordpress_email
 from imgur import imgur_email
+from hulu import hulu_email
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
@@ -37,6 +38,7 @@ def poastal():
         adobe_facebook_result = adobe_facebook_email(email)
         wordpress_result = wordpress_email(email)
         imgur_result = imgur_email(email)
+        hulu_result = hulu_email(email)
 
         return jsonify(
         {
@@ -56,6 +58,7 @@ def poastal():
         'Adobe': adobe_result,
         'Wordpress': wordpress_result,
         'Duolingo': duolingo_result,
+        'Hulu': hulu_result
         },
         })
     else:
