@@ -52,6 +52,8 @@ function displayResults(data) {
 
         if (data[category][platform] === 'true') {
           icon.src = './img/true.png';
+        } else if (data[category][platform] === 'unknown') {
+          icon.src = './img/unknown.png';
         } else {
           icon.src = './img/false.png';
         }
@@ -85,6 +87,8 @@ function displayResults(data) {
 
         if (data[category] === 'true') {
           icon.src = './img/true.png';
+        } else if (data[category] === 'unknown') {
+          icon.src = './img/unknown.png';
         } else {
           icon.src = './img/false.png';
         }
