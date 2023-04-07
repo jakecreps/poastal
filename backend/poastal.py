@@ -15,6 +15,7 @@ from adobe import adobe_email, adobe_facebook_email
 from wordpress import wordpress_email
 from imgur import imgur_email
 from hulu import hulu_email
+from rubmaps import rubmaps_email
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
@@ -39,6 +40,7 @@ def poastal():
         wordpress_result = wordpress_email(email)
         imgur_result = imgur_email(email)
         hulu_result = hulu_email(email)
+        rubmaps_result = rubmaps_email(email)
 
         return jsonify(
         {
@@ -58,7 +60,8 @@ def poastal():
         'Adobe': adobe_result,
         'Wordpress': wordpress_result,
         'Duolingo': duolingo_result,
-        'Hulu': hulu_result
+        'Hulu': hulu_result,
+        'Rubmaps': rubmaps_result,
         },
         })
     else:
