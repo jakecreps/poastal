@@ -50,4 +50,4 @@ def adobe_facebook_email(email):
     if facebook in html:
         return f'true'
     else:
-        return f'false'
+        return f'unknown'
