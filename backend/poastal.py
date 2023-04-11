@@ -1,9 +1,12 @@
+import os
+import sys
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import os, sys
+
 sys.path.append(os.path.abspath('./modules'))
 
-#import modules
+# import modules
 from twitter import twitter_email
 from snapchat import snapchat_email
 from parler import parler_email
@@ -16,10 +19,12 @@ from wordpress import wordpress_email
 from imgur import imgur_email
 from hulu import hulu_email
 from rubmaps import rubmaps_email
+from gravatar import get_gravatar_id, get_gravatar_info
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 CORS(app)
+
 
 @app.route('/')
 def poastal():
@@ -41,31 +46,40 @@ def poastal():
         imgur_result = imgur_email(email)
         hulu_result = hulu_email(email)
         rubmaps_result = rubmaps_email(email)
+        gravatar_result = get_gravatar_id(email)
+        gravatar_info_result = get_gravatar_info(email)
+        if not duolingo_name or duolingo_name == "N/A":
+            name = gravatar_info_result[0]
+        else:
+            name = duolingo_name
 
         return jsonify(
-        {
-        'Name': duolingo_name,
-        'Deliverable': deliverable_result,
-        'Disposable': disposable_result,
-        'Spam': spam_result,
-        #start profiles
-        'profiles':{
-        'Facebook': adobe_facebook_result,
-        'Twitter': twitter_result,
-        'Snapchat': snapchat_result,
-        'Parler': parler_result,
-        'Rumble': rumble_result,
-        'MeWe': mewe_result,
-        'Imgur': imgur_result,
-        'Adobe': adobe_result,
-        'Wordpress': wordpress_result,
-        'Duolingo': duolingo_result,
-        'Hulu': hulu_result,
-        'Rubmaps': rubmaps_result,
-        },
-        })
+            {
+                'Name': name,
+                'Photo': gravatar_info_result[1],
+                'Deliverable': deliverable_result,
+                'Disposable': disposable_result,
+                'Spam': spam_result,
+                # start profiles
+                'profiles': {
+                    'Facebook': adobe_facebook_result,
+                    'Twitter': twitter_result,
+                    'Snapchat': snapchat_result,
+                    'Parler': parler_result,
+                    'Rumble': rumble_result,
+                    'MeWe': mewe_result,
+                    'Imgur': imgur_result,
+                    'Adobe': adobe_result,
+                    'Wordpress': wordpress_result,
+                    'Duolingo': duolingo_result,
+                    'Hulu': hulu_result,
+                    'Rubmaps': rubmaps_result,
+                    'Gravatar': gravatar_result,
+                },
+            })
     else:
         return 'No email address provided.'
+
 
 if __name__ == '__main__':
     app.run(port=8080, debug=True)
