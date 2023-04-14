@@ -4,7 +4,7 @@ import json
 headers = {
     'Accept': 'application/vnd.github+json',
     'X-GitHub-Api-Version': '2022-11-28',
-    'Authorization': 'Bearer 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',
+    'Authorization': 'Bearer <insert API token>',
 }
 
 def github_email(email):
