@@ -28,6 +28,10 @@ Enter an email address and see the results.
 
 Test with `example@gmail.com`.
 
+There's a new GitHub module. 
+
+If you open up `github.py` you'll see a section that asks you to replace it with your own API key.
+
 ## 📣 Feedback 
 
 I hope you find Poastal to be a valuable tool for your OSINT investigations. If you have any feedback or suggestions on how we can improve Poastal, please let me know. I'm always looking for ways to improve this tool to better serve the OSINT community.
