@@ -16,7 +16,7 @@
 
 Make sure you have the requirements installed.
 
-```pip install -r requirements.txt```
+```pip install -r requirements.txt``` or ```pip3 install -r requirements.txt``` depending on your configuration.
 
 Navigate to the backend folder and run `poastal.py` to start the Flask app. This points to port:8080.
 
