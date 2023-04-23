@@ -25,21 +25,22 @@
         <!-- Title of the website -->
         <h1>Poastal</h1>
     </div>
-    <!-- Form section for email input -->
-    <input type="email" id="email" placeholder="Enter email address">
-    <!-- Display section for search results (hidden by default) -->
-    <div id="loading" class="hidden">Searching...</div>
-    <table id="result-table">
-        <!-- Table header section -->
-        <thead>
-            <tr>
-            </tr>
-        </thead>
-        <!-- Table body section for displaying search results -->
-        <tbody id="result">
-        </tbody>
-    </table>
-    <!-- Link to the external JavaScript file -->
+    <div class="main-content">
+        <input type="email" id="email" placeholder="Enter email address">
+        <!-- Display section for search results (hidden by default) -->
+        <div id="loading" class="hidden">Searching...</div>
+        <div id="image-container"></div>
+        <table id="result-table">
+            <!-- Table header section -->
+            <thead>
+                <tr>
+                </tr>
+            </thead>
+            <!-- Table body section for displaying search results -->
+            <tbody id="result">
+            </tbody>
+        </table>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
