@@ -1,6 +1,6 @@
 # Poastal - the Email OSINT tool
 
-![Poastal](img/logo.png | width=1000)
+![Poastal](img/logom.png)
 
 **Poastal** is an email OSINT tool that provides valuable information on any email address. With Poastal, you can easily input an email address and it will quickly answer several questions, providing you with crucial information.
 
