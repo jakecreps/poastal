@@ -7,20 +7,31 @@ body {
 }
 
 h1 {
-    color: #333;
+    color: #8B7B7A;
     font-size: 2.5rem;
-    margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
 }
 
 .header img {
     display: inline-block;
     vertical-align: middle;
 }
+
 .header h1 {
     display: inline-block;
     margin-left: 10px; /* adjust this value to increase or decrease the space between the image and the title */
     vertical-align: middle;
-    padding-bottom: 10px
+}
+
+#image-container img {
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  /* border: 1px solid #8B7B7A; */
+  border-radius: 4px;
 }
 
 input[type="email"] {
@@ -31,11 +42,14 @@ input[type="email"] {
     border: 1px solid #ccc;
     border-radius: 4px;
     font-family: Lato, sans-serif;
+    border-color: #E0D1D3;
+    color: #8B7B7A;
 }
 
 input[type="email"]:focus {
-border-color: #F58F6C;
-outline: none;
+    border-color: #EF8080;
+    outline: none;
+    color: #8B7B7A;
 }
 
 table {
@@ -45,8 +59,9 @@ table {
 
 th, td {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #EF8080;
     text-align: left;
+    color: #8B7B7A;
 }
 
 th {
@@ -56,6 +71,7 @@ th {
 
 td img {
     vertical-align: middle;
+    margin-right: 5px;
 }
 
 tr:nth-child(even) {
@@ -70,7 +86,7 @@ tr:nth-child(even) {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    color: #333;
+    color: #8B7B7A;
     margin-bottom: 1rem;
     animation: pulse 1s infinite;
     font-family: Lato, sans-serif;
@@ -90,11 +106,30 @@ tr:nth-child(even) {
 
 #newsletter-link a {
   font-family: Lato;
-  color: #88898E;
+  color: #8B7B7A;
   text-decoration: none;
 }
 
 #newsletter-link a:hover {
-  color: #F58F6C;
+  color: #EF8080;
   text-decoration: none;
+}
+
+[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -1.5em;
+    left: 1em;
+    background-color: #8B7B7A;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    z-index: 1000;
 }
