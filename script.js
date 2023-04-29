@@ -3,7 +3,10 @@ let newsletterLink = null;
 document.getElementById('email').addEventListener('keypress', async function (event) {
     if (event.key === 'Enter') {
         const email = this.value;
-        const url = `http://localhost:8080/?email=${encodeURIComponent(email)}`;
+        const url = `http://localhost:8080`;
+        const body = {
+          email,
+        }
 
         // Clear table content
         document.getElementById('result').innerHTML = '';
@@ -21,7 +24,14 @@ document.getElementById('email').addEventListener('keypress', async function (ev
         }
 
         try {
-            const response = await fetch(url);
+            const response = await fetch(url, {
+              headers: {
+                "Content-Type": "application/json",
+              },
+              method: "POST",
+              body: JSON.stringify(body),
+            });
+
             const result = await response.json();
             displayResults(result);
         } catch (error) {

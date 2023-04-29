@@ -20,13 +20,19 @@ from github import *
 from gravatar import hash_email, parse_json, gravatar_email
 from discord import *
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='../')
 app.config['JSON_SORT_KEYS'] = False
 CORS(app)
 
-@app.route('/')
+@app.route('/', methods=['GET'])
+def index():
+    return app.send_static_file('index.html')
+
+@app.route('/', methods=['POST'])
 def poastal():
-    email = request.args.get('email')
+    data = request.get_json()
+    email = data['email']
+
     if email:
         twitter_result = twitter_email(email)
         snapchat_result = snapchat_email(email)
