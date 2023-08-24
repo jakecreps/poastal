@@ -20,6 +20,7 @@ from hulu import hulu_email
 from rubmaps import rubmaps_email
 from github import *
 from gravatar import *
+from discord import *
 
 def check_email(email):
     twitter_result = twitter_email(email)
@@ -46,6 +47,7 @@ def check_email(email):
     gravatar_response = hash_email(email)
     gravatar_image = parse_json(gravatar_response, 'thumbnailUrl')
     gravatar_result = gravatar_email(email)
+    discord_result = discord_email(email)
 
     result = {
         'Duolingo Name': duolingo_name,
@@ -75,6 +77,7 @@ def check_email(email):
             'Rubmaps': rubmaps_result,
             'Github': github_result,
             'Gravatar': gravatar_result,
+            'Discord': discord_result,
         },
     }
 

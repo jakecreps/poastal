@@ -184,8 +184,8 @@ function displayResults(data) {
                         const img = document.createElement('img');
                         img.src = imageUrl;
                         img.alt = `${platform} profile image`;
-                        img.width = 100;
-                        img.height = 100;
+                        img.width = 175;
+                        img.height = 175;
 
                         imageContainer.appendChild(img);
                     }
