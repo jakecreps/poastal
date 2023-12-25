@@ -40,10 +40,12 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 USER appuser
 
 # Copy the source code into the container.
-COPY . .
+COPY --chown=appuser:root . .
 
 # Expose the port that the application listens on.
 EXPOSE 8080
+
+WORKDIR /app/backend
 
 # Run the application.
 CMD python poastal.py
